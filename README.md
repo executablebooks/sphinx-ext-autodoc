@@ -1,4 +1,4 @@
-# sphinx-ext-autodoc
+# sphinx-ext-autodoc [IN-DEVELOPMENT]
 
 [![Code style: black][black-badge]][black-link]
 
