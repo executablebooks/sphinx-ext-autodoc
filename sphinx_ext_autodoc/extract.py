@@ -91,6 +91,9 @@ def format_event_listeners(app: Sphinx):
     return events
 
 
+# TODO config options (+ defaults)
+
+
 def extract_role_info(name: str, role_func: Callable) -> dict:
     """Extract JSONable information about a role."""
     return {

@@ -1,0 +1,19 @@
+{{ name }}
+{{ '=' * name|length }}
+
+{{ description }}
+
+API Class: ``{{ klass }}``
+Required Arguments: {{ required_arguments }}
+Optional Arguments: {{ optional_arguments }}
+Has Content: {{ has_content }}
+
+.. list-table:: Options
+   :header-rows: 1
+
+   * - Name
+     - Validation
+   {%- for name, value in options.items() %}
+   * - {{ name }}
+     - {{ value }}
+   {%- endfor %}

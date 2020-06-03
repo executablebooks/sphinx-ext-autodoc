@@ -1,1 +1,3 @@
 sphinx >= 2
+jinja2
+importlib_resources
