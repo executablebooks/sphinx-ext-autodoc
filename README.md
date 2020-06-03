@@ -13,6 +13,8 @@ regarding the elements loaded by each extension (and docutils/sphinx themselves)
 - transforms
 - event callbacks
 
+Then optionally turn it into documentation pages (maybe similar to how [sphinx-apidoc](https://www.sphinx-doc.org/en/master/man/sphinx-apidoc.html) works).
+
 [black-badge]: https://img.shields.io/badge/code%20style-black-000000.svg
 [black-link]: https://github.com/ambv/black
 
