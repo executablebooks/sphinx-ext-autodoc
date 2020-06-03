@@ -31,6 +31,7 @@ setup(
     url=("https://github.com/" "executablebooks/sphinx-ext-autodoc"),
     license="MIT",
     packages=find_packages(),
+    include_package_data=True,
     install_requires=requirements,
     extras_require={
         "code_style": ["flake8<3.8.0,>=3.7.0", "black", "pre-commit==1.17.0"],
