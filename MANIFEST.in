@@ -1,2 +1,2 @@
 LICENSE
-recursive-include **/templates
+include sphinx_ext_autodoc/templates/*
