@@ -1,0 +1,3 @@
+pytest
+pytest-regressions
+sphinx == 2.4.4

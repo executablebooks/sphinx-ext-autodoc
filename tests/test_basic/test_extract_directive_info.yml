@@ -1,0 +1,19 @@
+description: 'The figure directive which applies `:name:` option to the figure node
+
+  instead of the image node.'
+has_content: true
+klass: sphinx.directives.patches.Figure
+name: figure
+optional_arguments: 0
+options:
+  align: align
+  alt: unchanged
+  class: class_option
+  figclass: class_option
+  figwidth: figwidth_value
+  height: length_or_unitless
+  name: unchanged
+  scale: percentage
+  target: unchanged_required
+  width: length_or_percentage_or_unitless
+required_arguments: 1

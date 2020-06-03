@@ -1,0 +1,266 @@
+builder-inited:
+- description: ''
+  module: sphinx.builders.epub3
+  name: validate_config_values
+- description: ''
+  module: sphinx.builders.html
+  name: validate_math_renderer
+- description: 'Register application object to autosummary module.
+
+
+    Since Sphinx-1.7, documenters and attrgetters are registered into
+
+    applicaiton object.  As a result, the arguments of
+
+    ``get_documenter()`` has been changed.  To keep compatibility,
+
+    this handler registers application object to the module.'
+  module: sphinx.util.compat
+  name: register_application_for_autosummary
+config-inited:
+- description: This converts string styled epub_css_files to tuple styled one.
+  module: sphinx.builders.epub3
+  name: convert_epub_css_files
+- description: This converts string styled html_css_files to tuple styled one.
+  module: sphinx.builders.html
+  name: convert_html_css_files
+- description: This converts string styled html_js_files to tuple styled one.
+  module: sphinx.builders.html
+  name: convert_html_js_files
+- description: Check html_extra_paths setting.
+  module: sphinx.builders.html
+  name: validate_html_extra_path
+- description: Check html_static_paths setting.
+  module: sphinx.builders.html
+  name: validate_html_static_path
+- description: Check html_logo setting.
+  module: sphinx.builders.html
+  name: validate_html_logo
+- description: Check html_favicon setting.
+  module: sphinx.builders.html
+  name: validate_html_favicon
+- description: ''
+  module: sphinx.builders.latex
+  name: validate_config_values
+- description: 'This converts old styled source_suffix to new styled one.
+
+
+    * old style: str or list
+
+    * new style: a dict which maps from fileext to filetype'
+  module: sphinx.config
+  name: convert_source_suffix
+- description: Initialize :confval:`numfig_format`.
+  module: sphinx.config
+  name: init_numfig_format
+- description: 'correct values of copyright year that are not coherent with
+
+    the SOURCE_DATE_EPOCH environment variable (if set)
+
+
+    See https://reproducible-builds.org/specs/source-date-epoch/'
+  module: sphinx.config
+  name: correct_copyright_year
+- description: 'check all values for deviation from the default value''s type, since
+
+    that can result in TypeErrors all over the place NB.'
+  module: sphinx.config
+  name: check_confval_types
+- description: ''
+  module: sphinx.config
+  name: check_primary_domain
+- description: Verify the required Sphinx extensions are loaded.
+  module: sphinx.extension
+  name: verify_needs_extensions
+- description: Merge source_suffix which specified by user and added by extensions.
+  module: sphinx.registry
+  name: merge_source_suffix
+- description: ''
+  module: sphinx.util.compat
+  name: deprecate_source_parsers
+doctree-read:
+- description: Process docutils-generated dependency info.
+  module: sphinx.environment.collectors.dependencies
+  name: process_doc
+- description: Process and rewrite image URIs.
+  module: sphinx.environment.collectors.asset
+  name: process_doc
+- description: 'Process downloadable file paths. '
+  module: sphinx.environment.collectors.asset
+  name: process_doc
+- description: 'Process the docinfo part of the doctree as metadata.
+
+
+    Keep processing minimal -- just return what docutils says.'
+  module: sphinx.environment.collectors.metadata
+  name: process_doc
+- description: 'Add a title node to the document (just copy the first section title),
+
+    and store that title in the environment.'
+  module: sphinx.environment.collectors.title
+  name: process_doc
+- description: Build a TOC from the doctree and store it in the inventory.
+  module: sphinx.environment.collectors.toctree
+  name: process_doc
+env-get-outdated:
+- description: 'Adjust master_doc to ''contents'' to support an old project which
+    does not have
+
+    no master_doc setting.'
+  module: sphinx.config
+  name: check_master_doc
+- description: 'Return a list of docnames to re-read.
+
+
+    This methods is called before reading the documents.'
+  module: sphinx.environment.collectors
+  name: get_outdated_docs
+- description: 'Return a list of docnames to re-read.
+
+
+    This methods is called before reading the documents.'
+  module: sphinx.environment.collectors
+  name: get_outdated_docs
+- description: 'Return a list of docnames to re-read.
+
+
+    This methods is called before reading the documents.'
+  module: sphinx.environment.collectors
+  name: get_outdated_docs
+- description: 'Return a list of docnames to re-read.
+
+
+    This methods is called before reading the documents.'
+  module: sphinx.environment.collectors
+  name: get_outdated_docs
+- description: 'Return a list of docnames to re-read.
+
+
+    This methods is called before reading the documents.'
+  module: sphinx.environment.collectors
+  name: get_outdated_docs
+- description: 'Return a list of docnames to re-read.
+
+
+    This methods is called before reading the documents.'
+  module: sphinx.environment.collectors
+  name: get_outdated_docs
+env-get-updated:
+- description: 'Return a list of docnames to re-read.
+
+
+    This methods is called after reading the whole of documents (experimental).'
+  module: sphinx.environment.collectors
+  name: get_updated_docs
+- description: 'Return a list of docnames to re-read.
+
+
+    This methods is called after reading the whole of documents (experimental).'
+  module: sphinx.environment.collectors
+  name: get_updated_docs
+- description: 'Return a list of docnames to re-read.
+
+
+    This methods is called after reading the whole of documents (experimental).'
+  module: sphinx.environment.collectors
+  name: get_updated_docs
+- description: 'Return a list of docnames to re-read.
+
+
+    This methods is called after reading the whole of documents (experimental).'
+  module: sphinx.environment.collectors
+  name: get_updated_docs
+- description: 'Return a list of docnames to re-read.
+
+
+    This methods is called after reading the whole of documents (experimental).'
+  module: sphinx.environment.collectors
+  name: get_updated_docs
+- description: 'Return a list of docnames to re-read.
+
+
+    This methods is called after reading the whole of documents (experimental).'
+  module: sphinx.environment.collectors.toctree
+  name: get_updated_docs
+env-merge-info:
+- description: 'Merge in specified data regarding docnames from a different `BuildEnvironment`
+
+    object which coming from a subprocess in parallel builds.'
+  module: sphinx.environment.collectors.dependencies
+  name: merge_other
+- description: 'Merge in specified data regarding docnames from a different `BuildEnvironment`
+
+    object which coming from a subprocess in parallel builds.'
+  module: sphinx.environment.collectors.asset
+  name: merge_other
+- description: 'Merge in specified data regarding docnames from a different `BuildEnvironment`
+
+    object which coming from a subprocess in parallel builds.'
+  module: sphinx.environment.collectors.asset
+  name: merge_other
+- description: 'Merge in specified data regarding docnames from a different `BuildEnvironment`
+
+    object which coming from a subprocess in parallel builds.'
+  module: sphinx.environment.collectors.metadata
+  name: merge_other
+- description: 'Merge in specified data regarding docnames from a different `BuildEnvironment`
+
+    object which coming from a subprocess in parallel builds.'
+  module: sphinx.environment.collectors.title
+  name: merge_other
+- description: 'Merge in specified data regarding docnames from a different `BuildEnvironment`
+
+    object which coming from a subprocess in parallel builds.'
+  module: sphinx.environment.collectors.toctree
+  name: merge_other
+env-purge-doc:
+- description: 'Remove specified data of a document.
+
+
+    This method is called on the removal of the document.'
+  module: sphinx.environment.collectors.dependencies
+  name: clear_doc
+- description: 'Remove specified data of a document.
+
+
+    This method is called on the removal of the document.'
+  module: sphinx.environment.collectors.asset
+  name: clear_doc
+- description: 'Remove specified data of a document.
+
+
+    This method is called on the removal of the document.'
+  module: sphinx.environment.collectors.asset
+  name: clear_doc
+- description: 'Remove specified data of a document.
+
+
+    This method is called on the removal of the document.'
+  module: sphinx.environment.collectors.metadata
+  name: clear_doc
+- description: 'Remove specified data of a document.
+
+
+    This method is called on the removal of the document.'
+  module: sphinx.environment.collectors.title
+  name: clear_doc
+- description: 'Remove specified data of a document.
+
+
+    This method is called on the removal of the document.'
+  module: sphinx.environment.collectors.toctree
+  name: clear_doc
+env-updated:
+- description: ''
+  module: sphinx.ext.mathjax
+  name: install_mathjax
+html-page-context:
+- description: 'Set up js_tag() template helper.
+
+
+    .. note:: This set up function is added to keep compatibility with webhelper.'
+  module: sphinx.builders.html
+  name: setup_js_tag_helper
+- description: ''
+  module: alabaster
+  name: update_context
